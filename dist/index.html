@@ -4,7 +4,16 @@
     <title>Web Components with Webpack Starter Kit</title>
   </head>
   <body>
-    <my-app></my-app>
+    <my-button></my-button>
     <script src="./bundle.js"></script>
+    <script>
+      const element = document.querySelector('my-button');
+      element.label = "Click Me Now";
+    </script>
+    <script>
+      document
+              .querySelector('my-button')
+              .addEventListener('onClick', value => console.log(value));
+    </script>
   </body>
 </html>
